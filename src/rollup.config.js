@@ -14,12 +14,12 @@ let includePathOptions = {
 export default {
     entry: "Main.jsx",
     format: "umd",
-    moduleId: "bundle",
-    moduleName: "bundle",
+    moduleId: "main",
+    moduleName: "main",
     plugins: [
         includePaths(includePathOptions),
         babel(),
         // uglify(),
     ],
-    dest: "bundle.js"
+    dest: "main.js"
 };
