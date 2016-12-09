@@ -24,3 +24,5 @@ Thumbs.db
 # Other folders to ignore
 node_modules
 
+# Compiled file
+main.js
