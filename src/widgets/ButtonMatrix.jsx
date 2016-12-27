@@ -1,7 +1,7 @@
 import {UI} from "UI";
 
 class ButtonMatrix extends UI.Element {
-    renderHTML() {
+    render() {
         let buttons = [];
         for (let i = 0; i < 100; i++) {
             buttons.push(
@@ -13,7 +13,7 @@ class ButtonMatrix extends UI.Element {
 }
 
 class DemoTabArea extends UI.Element {
-    renderHTML() {
+    render() {
         return [<UI.TabArea>
             <UI.Panel title="Tab1">
                 <h2>Tab 1 content</h2>

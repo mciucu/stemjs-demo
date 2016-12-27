@@ -43,7 +43,7 @@ class Dot extends UI.Element {
         return "span";
     }
 
-    // getDOMAttributes() {
+    // getNodeAttributes() {
     //     let attr = super.getDOMAttributes();
     //
     //     attr.addClass(styleSet.dot);
@@ -52,7 +52,7 @@ class Dot extends UI.Element {
     //     return attr;
     // }
 
-    // applyDOMAttributes() {
+    // applyNodeAttributes() {
     //     this.node.className = String(styleSet.dot);
     //     this.setStyle("background-color", randomColor());
     // }
@@ -64,7 +64,7 @@ class Dot extends UI.Element {
 }
 
 class DotRow extends UI.Element {
-    getDOMAttributes() {
+    getNodeAttributes() {
         let attr = super.getDOMAttributes();
 
         attr.addClass(styleSet.dotRow);
@@ -72,7 +72,7 @@ class DotRow extends UI.Element {
         return attr;
     }
 
-    renderHTML() {
+    render() {
         let ans = new Array(SIZE);
         for (let i = 0; i < SIZE; i += 1) {
             ans[i] = <Dot className={styleSet.dot} style={{backgroundColor: randomColor()}} />;
@@ -88,7 +88,7 @@ class DotRow extends UI.Element {
 }
 
 class DotMatrix extends UI.Element {
-    renderHTML() {
+    render() {
         let ans = [];
         for (let i = 0; i < SIZE; i++) {
             ans.push(UI.createElement(DotRow, {}));

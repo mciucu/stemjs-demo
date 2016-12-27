@@ -1,35 +1,22 @@
-import {UI} from "UI";
-import {DOMAttributes, ATTRIBUTE_NAMES_MAP} from "DOMAttributes";
+import {UI} from "UIBase";
 import {DotMatrix} from "widgets/DotMatrix";
 import {ButtonMatrix, DemoTabArea} from "widgets/ButtonMatrix";
 
-let start = performance.now();
-let dotMatrix = DotMatrix.create(document.body);
+// let dotMatrix = DotMatrix.create(document.body);
+class DemoElement extends UI.Element {
+    extraNodeAttributes(attr) {
+        attr.setStyle("margin", "10px");
+    }
 
-console.log("Duration: ", performance.now() - start);
-// setInterval(() => {
-//     dotMatrix.update();
-// }, 10);
-
-start = performance.now();
-
-let options = {
-    className: "ceva nou",
-    style: {
-        backgroundColor: "red",
-        width: "10px",
-        height: "10px",
-    },
-};
-
-const ITER = 1e6 | 0;
-
-for (let i = 0; i < ITER; i++) {
-    let attr = UI.T("Ceva fodfkgjh dfgd gdf g df gd fg s fgsg ");
+    render() {
+        return [
+            <h1>Demo element</h1>,
+            <ButtonMatrix />,
+            <DemoTabArea />
+        ]
+    }
 }
 
-console.log("Duration2: ", performance.now() - start);
+let demoElement = DemoElement.create(document.body);
 
-// DemoTabArea.create(document.body);
-//
-// let buttonMatrix = ButtonMatrix.create(document.body);
+console.log("Done!!!");
