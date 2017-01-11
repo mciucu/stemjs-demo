@@ -1,4 +1,6 @@
 import {UI} from "UI";
+import {TabArea, MinimalistTabAreaStyle} from "tabs/TabArea";
+import {SectionDivider} from "SectionDivider";
 
 class ButtonMatrix extends UI.Element {
     render() {
@@ -14,7 +16,7 @@ class ButtonMatrix extends UI.Element {
 
 class DemoTabArea extends UI.Element {
     render() {
-        return [<UI.TabArea>
+        return [<TabArea styleSet={MinimalistTabAreaStyle.getInstance()}>
             <UI.Panel title="Tab1">
                 <h2>Tab 1 content</h2>
                 <h2>Some more text</h2>
@@ -25,15 +27,15 @@ class DemoTabArea extends UI.Element {
             <UI.Panel title="Tab3" >
                 <h2>Tab 3 content</h2>
             </UI.Panel>
-        </UI.TabArea>,
-        <UI.SectionDivider style={{width:"100%", height: "200px"}} orientation={UI.Orientation.HORIZONTAL}>
+        </TabArea>,
+        <SectionDivider style={{width:"100%", height: "200px"}} orientation={UI.Orientation.HORIZONTAL}>
             <UI.Panel style={{display: "inline-block", width: "30%"}} >
                 <h3>This is a text on the left</h3>
             </UI.Panel>
             <UI.Panel style={{display: "inline-block", width: "70%"}}>
                 <h3>Sdfgedfjkndkgbhdkfjnkdfv dfdfgbd d fgd</h3>
             </UI.Panel>
-        </UI.SectionDivider>
+        </SectionDivider>
         ]
     }
 }

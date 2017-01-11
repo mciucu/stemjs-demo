@@ -43,19 +43,15 @@ class Dot extends UI.Element {
         return "span";
     }
 
-    // getNodeAttributes() {
-    //     let attr = super.getDOMAttributes();
-    //
-    //     attr.addClass(styleSet.dot);
-    //     attr.setStyle("background-color", randomColor());
-    //
-    //     return attr;
+    // extraNodeAttributes(attr) {
+    //     attr.clasName = styleSet.dot;
+    //     attr.setStyle("backgroundColor", randomColor());
     // }
 
-    // applyNodeAttributes() {
-    //     this.node.className = String(styleSet.dot);
-    //     this.setStyle("background-color", randomColor());
-    // }
+    applyNodeAttributes() {
+        this.node.className = String(styleSet.dot);
+        this.node.style.backgroundColor = this.options.style.backgroundColor;
+    }
 
     update() {
         updates++;
@@ -64,12 +60,8 @@ class Dot extends UI.Element {
 }
 
 class DotRow extends UI.Element {
-    getNodeAttributes() {
-        let attr = super.getDOMAttributes();
-
+    extraNodeAttributes(attr) {
         attr.addClass(styleSet.dotRow);
-
-        return attr;
     }
 
     render() {
