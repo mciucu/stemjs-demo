@@ -22,8 +22,6 @@ cd src
 rollup -c
 ```
 
-Ignore `Error: Cannot find module 'babel-runtime'` in case it appears. As long as file `src/bundle.js` gets generated, you will be just fine.
-
 ##### Run
 Simply open index.html in your favorite browser (we recommend Google Chrome for full compatibility).
 
