@@ -19,7 +19,7 @@ export default {
     plugins: [
         includePaths(includePathOptions),
         babel(),
-        // uglify(),
+        //uglify(),
     ],
     dest: "bundle.js"
 };
