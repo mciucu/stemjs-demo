@@ -17,6 +17,7 @@ class DemoElement extends UI.Element {
         return [
             <h1>Demo element</h1>,
             <ButtonMatrix />,
+            <hr/>, //Add a horizontal line
             <DemoTabArea />
         ]
     }
