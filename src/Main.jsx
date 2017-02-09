@@ -15,6 +15,7 @@ class DemoElement extends UI.Element {
 
     render() {
         return [
+            <h1>First title</h1>,
             <h1>Demo element</h1>,
             <ButtonMatrix />,
             <hr/>, //Add a horizontal line
@@ -24,5 +25,3 @@ class DemoElement extends UI.Element {
 }
 
 let demoElement = DemoElement.create(document.body);
-
-// console.log("Done!!!");

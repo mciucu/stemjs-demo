@@ -1,31 +1,30 @@
 import {UI} from "UI";
 import {StyleSet} from "Style";
+import {styleRule} from "decorators/Style";
 
 const SIZE = 200;
-const MARGIN = 1.3 + Math.random() / 2;
+const MARGIN = 1.5;
 
 class DotMatrixStyleSet extends StyleSet {
+    @styleRule
+    dotRow = {
+        lineHeight: 0,
+        height: () => this.squareSize + "px",
+    };
+
+    @styleRule
+    dot = {
+        display: "inline-block",
+        height: () => this.squareSize + "px",
+        width: () => this.squareSize + "px",
+    };
+
     constructor() {
         super({
             updateOnResize: true
         });
-        let squareSize;
-
         this.addBeforeUpdateListener(() => {
-            squareSize = Math.min(window.innerHeight, window.innerWidth) / (MARGIN * SIZE);
-        });
-
-        this.update();
-
-        this.dotRow = this.css({
-            "line-height": 0,
-            height: () => squareSize + "px",
-        });
-
-        this.dot = this.css({
-            display: "inline-block",
-            height: () => squareSize + "px",
-            width: () => squareSize + "px",
+            this.squareSize = Math.min(window.innerHeight, window.innerWidth) / (MARGIN * SIZE);
         });
     }
 }
@@ -38,20 +37,19 @@ function randomColor() {
 
 let updates = 0;
 
-class Dot extends UI.Element {
-    getPrimitiveTag() {
-        return "span";
-    }
-
+class Dot extends UI.Primitive("span") {
     // extraNodeAttributes(attr) {
     //     attr.clasName = styleSet.dot;
     //     attr.setStyle("backgroundColor", randomColor());
     // }
 
-    applyNodeAttributes() {
-        this.node.className = String(styleSet.dot);
-        this.node.style.backgroundColor = this.options.style.backgroundColor;
-    }
+    // Optimize to a bare minimum this class, as lean as possible
+    // applyNodeAttributes() {
+    //     this.node.className = String(styleSet.dot);
+    //     this.node.style.backgroundColor = this.options.style.backgroundColor;
+    // }
+    //
+    // addListenersFromOptions() {}
 
     update() {
         updates++;
