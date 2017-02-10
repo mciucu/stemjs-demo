@@ -25,3 +25,6 @@ Thumbs.db
 node_modules
 src/bundle.js
 
+
+# Django localdb
+db.sqlite3
