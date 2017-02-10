@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd src; rollup -c",
     "watch": "cd src; rollup -c --watch",
-    "start": "python -m SimpleHTTPServer"
+    "start": "python3 manage.py runserver"
   },
   "author": "Mihai Ciucu",
   "license": "ISC",
