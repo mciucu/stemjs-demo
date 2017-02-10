@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd src; rollup -c",
+    "watch": "cd src; rollup -c --watch",
     "start": "python -m SimpleHTTPServer"
   },
   "author": "Mihai Ciucu",
