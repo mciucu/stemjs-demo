@@ -23,4 +23,5 @@ Thumbs.db
 
 # Other folders to ignore
 node_modules
+src/bundle.js
 
