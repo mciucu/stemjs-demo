@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd src; rollup -c",
-    "watch": "cd src; rollup -c --watch",
+    "build": "cd stemjs_demo/static/src; rollup -c",
+    "watch": "cd stemjs_demo/static/src; rollup -c --watch",
     "start": "python3 manage.py runserver"
   },
   "author": "Mihai Ciucu",
