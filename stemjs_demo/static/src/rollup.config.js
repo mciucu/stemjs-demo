@@ -5,9 +5,9 @@ import includePaths from "rollup-plugin-includepaths";
 let includePathOptions = {
     extensions: [".es6.js", ".jsx"],
     paths: [
-        "../node_modules/stem-core/src",
-        "../node_modules/stem-core/src/base",
-        "../node_modules/stem-core/src/ui",
+        "../../../node_modules/stem-core/src",
+        "../../../node_modules/stem-core/src/base",
+        "../../../node_modules/stem-core/src/ui",
     ]
 };
 

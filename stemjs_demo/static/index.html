@@ -8,8 +8,9 @@
     <noscript>
         <h1>Javascript seems to be disabled, what year is this?</h1>
     </noscript>
-    <script src="src/babel.polyfill.min.js"></script>
-    <script src="src/bundle.js"></script>
+    {% load static %}
+    <script src="{% static "src/babel.polyfill.min.js" %}"></script>
+    <script src="{% static "src/bundle.js" %}"></script>
     <style>
         body {
             font-family: sans-serif;
