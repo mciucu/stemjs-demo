@@ -31,10 +31,10 @@ class DemoTabArea extends Element {
         </TabArea>,
         <hr/>,
         <SectionDivider style={{width:"100%", height: "200px"}} orientation={UI.Orientation.HORIZONTAL}>
-            <div style={{display: "inline-block", width: "30%"}} >
+            <div style={{width: "30%"}} >
                 <h3>This is a text on the left</h3>
             </div>
-            <div style={{display: "inline-block", width: "70%"}}>
+            <div style={{width: "70%"}}>
                 <h3>Sdfgedfjkndkgbhdkfjnkdfv dfdfgbd d fgd</h3>
             </div>
         </SectionDivider>
